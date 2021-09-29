@@ -1,0 +1,279 @@
+// Import fonts and fonts variables
+
+@font-face {
+    font-family: 'Roboto Slab Regular';
+    src: url('../fonts/RobotoSlab-Regular.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab Bold';
+    src: url('../fonts/RobotoSlab-Bold.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Roboto Slab Light';
+    src: url('../fonts/RobotoSlab-Light.woff2') format('woff2'),
+        url('../fonts/RobotoSlab-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'Go 2 Old Western';
+    src: url('../fonts/Go2OldWestern.woff2') format('woff2'),
+        url('../fonts/Go2OldWestern.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+$font-main: 'Roboto Slab Regular';
+$font-heading: 'Go 2 Old Western';
+
+$robo-bold: 'Roboto Slab Bold';
+$robo-reg: 'Roboto Slab Regular';
+$robo-light: 'Roboto Slab Light';
+
+
+
+
+
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('../fonts/icomoon.eot?6t1v5a');
+    src:  url('../fonts/icomoon.eot?6t1v5a#iefix') format('embedded-opentype'),
+      url('../fonts/icomoon.ttf?6t1v5a') format('truetype'),
+      url('../fonts/icomoon.woff?6t1v5a') format('woff'),
+      url('../fonts/icomoon.svg?6t1v5a#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-arrow-right-sm:before {
+    content: "\e900";
+    color: #f6f7f7;
+  }
+  .icon-check-circle:before {
+    content: "\e90a";
+  }
+  .icon-angle-right:before {
+    content: "\e909";
+  }
+  .icon-star:before {
+    content: "\e908";
+  }
+  .icon-envelope:before {
+    content: "\e901";
+  }
+  .icon-long-arrow-left:before {
+    content: "\e902";
+  }
+  .icon-long-arrow-right:before {
+    content: "\e903";
+  }
+  .icon-calendar-alt:before {
+    content: "\e904";
+  }
+  .icon-twitter:before {
+    content: "\e906";
+  }
+  .icon-facebook-square:before {
+    content: "\e907";
+  }
+  
+  .icon-search-plus:before, .fa-search-plus:before {
+    content: "\e90b";
+  }
+  
+  .icon-phone-alt:before, .fa-phone-alt:before  {
+    content: "\e905";
+  }
+
+
+.fa-star {
+    font-family: 'icomoon'!important;
+    &:after {
+        content: "\e908";
+    }
+}
+
+.fas, .fa, .far, .fal {
+    font-family: 'icomoon'!important;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body { 
+	font: {
+		size:$base-size;
+		family: $font-main;
+	}
+	-webkit-text-size-adjust: 100%;  //fix for iOS
+	overflow-x:hidden;    
+}
+
+p {
+    font-family: $font-main;
+    font-size: 16px;
+    line-height: 1.875;
+    color: #27303a;
+    margin-top: 0;
+    margin-bottom: 35px;
+    @include bp(sm-down) {
+        margin-bottom: 25px;
+    }
+    a {
+        &:hover {
+            color: $red;
+        }
+    }  
+    strong {
+        font-family: $robo-bold;
+    }  
+}
+
+ul {
+    list-style: none;
+    margin:0px;
+    padding:0px;
+}
+
+small {
+    font-size: 0.875em;
+}
+
+address {
+    padding:0px;
+    margin:0px;
+}
+
+a {
+    @include animate-fade;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-heading;
+    font-weight: 500;
+}
+
+li {
+    list-style: none;
+    margin:0px;
+    padding:0px;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+-moz-appearance: textfield;
+}
+// reset
+a {
+    @include animate-fade;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+a, button, input, textarea {
+    &:focus {
+        outline: none!important;
+    }
+}
+
+button, input[type="text"], input[type="email"] , input[type="tel"], textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-clip: padding-box;
+    -webkit-box-shadow: none!important;
+    box-shadow: none!important;
+    border-radius: 0;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding:0;
+    margin: 0;
+}
+
+address {
+    margin:0px;
+    padding:0px;
+}
+
+i {
+    font-style: normal;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    @include animate-fade;
+}

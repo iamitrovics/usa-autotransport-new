@@ -1,0 +1,360 @@
+#faq-intro-area {
+    background-color: $blue;
+    padding-bottom: 100px;
+    position: relative;
+    @include bp(desktop) {
+        padding-bottom: 90px;
+    }
+    @include bp(lg) {
+        padding-bottom: 80px;
+    }
+    @include bp(md) {
+        padding-bottom: 70px;
+    }
+    @include bp(sm-down) {
+        padding-bottom: 60px;
+    }
+    .stars {
+        position: absolute;
+        @include centre(x);
+        top: 45px;
+    }
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+    .intro-topleft-shape {
+        top: 0px;
+        left: 0;
+        content: '';
+        display: block;
+        background: url(../img/bg/intro-topleft-shape.png) left top no-repeat;
+        position: absolute;
+        width: 129px;
+        height: 193px;
+    }
+    &:before {
+        bottom: 0px;
+        left: 0;
+        content: '';
+        display: block;
+        background: url(../img/bg/intro-shape.png) left bottom no-repeat;
+        position: absolute;
+        width: 654px;
+        height: 467px;
+    }
+    &:after {
+        top: 1px;
+        right: 0;
+        content: '';
+        display: block;
+        background: url(../img/bg/about-shape-r.png) right top no-repeat;
+        position: absolute;
+        width: 297px;
+        height: 100%;
+    }
+    .about-intro-content {
+        padding-top: 160px;
+        position: relative;
+        max-width: 875px;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        @include bp(md-down) {
+            padding-top: 100px;
+            max-width: 100%;
+        }
+        @include bp(sm-down) {
+            display: block;
+        }
+        &:before {
+            top: 0;
+            @include centre(x);
+            content: '';
+            display: block;
+            background: url(../img/bg/intro-top-shape.png) center top no-repeat;
+            position: absolute;
+            width: 806px;
+            height: 81px;
+        }
+        h2 {
+            @include heading-text;
+            color: #fff;
+            margin-bottom: 60px;
+            text-align: center;
+            line-height: 1;
+            color:#d4cec0;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            &:before {
+                margin-bottom: 10px;
+            }
+        }
+        p {
+            @include regular-text;
+            color: #fff;
+            text-align: justify;
+            @include bp(md-down) {
+                max-width: 100%;
+            }
+        }
+    }
+    .faq-photo {
+        margin-left: 50px;
+        img {
+            min-width: 122px;
+            @include bp(sm-down) {
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+        @include bp(sm-down) {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    .faq-text {
+        max-width: 630px;
+    }
+    .scroll-down {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 77px;
+        height: 77px;
+        background-color: $blue;
+        border-radius: 50%;
+        @include centre(x);
+        bottom: -35px;
+        z-index: 1;
+        a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color:$red;
+            font-size: 22px;
+            width: 100%;
+            height: 100%;
+            padding-top: 10px;
+            i {
+                transform: rotate(90deg);
+                font-weight: bold;
+            }
+        }
+    }
+    .city-logo {
+        position: absolute;
+        right: 65px;
+        opacity: .2;
+        bottom: -150px;
+    }
+}
+
+
+#faq-section {
+    background-color: $merino;
+    padding-top: 130px;
+    padding-bottom: 105px;
+    position: relative;
+    @include bp(desktop) {
+        //padding-bottom: 150px;
+    }
+    @include bp(lg) {
+        //padding-bottom: 120px;
+    }
+    @include bp(md) {
+        //padding-bottom: 70px;
+    }
+    @media (max-width:1550px) {
+        border-top-left-radius: 240px 170px;
+    }
+    @include bp(sm-down) {
+        padding-top: 80px;
+        border-radius: 0;
+    }
+    &:after {
+        top: 0;
+        @include centre(x);
+        content: '';
+        display: block;
+        background: url(../img/bg/about-top-shape.png) center top no-repeat;
+        position: absolute;
+        max-width: 714px;
+        width: 100%;
+        height: 110px;
+        @include bp(sm-down) {
+            display: none;
+        }
+    }
+    &:before {
+        top: -1px;
+        left: 0;
+        content: '';
+        display: block;
+        background: url(../img/bg/aboutbg.jpg) left top no-repeat;
+        position: absolute;
+        max-width: 654px;
+        width: 100%;
+        height: 467px;
+        @media (max-width:1550px) {
+            background-color: $blue;
+            position: absolute;
+            width: 100%;
+            height: 170px;
+            display: block;
+            top: 0;
+            content: '';
+            z-index: -1;
+            left: 0;
+            background-image: none;
+        }
+        @include bp(sm-down) {
+            display: none;
+        }
+    }
+    .about-bottom-shade {
+        display: block;
+        position: absolute;
+        max-width: 1097px;
+        width: 100%;
+        height: 113px;
+        bottom: 0;
+        left: 0;
+        background: url(../img/bg/about-bottom-shade.png) no-repeat;
+        background-size: cover;
+        z-index: 2;
+    }
+    .about-rb-shape {
+        display: block;
+        bottom: 0px;
+        right: 0;
+        display: block;
+        background: url(../img/bg/about-rb-shape.png) bottom right no-repeat;
+        position: absolute;
+        width: 171px;
+        height: 110px;
+    }
+    .faq__accordion {
+        max-width: 875px;
+        margin-left: auto;
+        margin-right: auto;
+        &:before {
+            top: 0;
+            left: 65px;
+            content: '';
+            display: block;
+            background: url(../img/bg/about-bg-inner.png) left top repeat-y;
+            position: absolute;
+            max-width: 235px;
+            width: 100%;
+            height: 100%;
+            @include bp(lg) {
+                left: -50px;
+            }
+            @include bp(md-down) {
+                display: none;
+            }
+        }
+        &:after {
+            bottom: 0;
+            right: -175px;
+            content: '';
+            display: block;
+            background: url(../img/bg/about-bg-inner.png) right bottom no-repeat;
+            position: absolute;
+            max-width: 235px;
+            width: 100%;
+            height: 100%;
+            @include bp(lg) {
+                right: -185px;
+            }
+            @include bp(md-down) {
+                display: none;
+            }
+        }
+        .faq-wrap {
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 18px;
+            font-family: $robo-bold;
+            color: #202937;
+            line-height: 1.333;
+            position: relative;
+            padding: 14px 60px 14px 30px;
+            cursor: pointer;
+            @include animate-fade;
+            border:0;
+            margin: 0;
+            border-radius: 8px;
+            background-color: #c1bbae;
+            @include bp(sm-down) {
+                font-size: 16px;
+                padding-left: 20px;
+            }
+            &:hover {
+                cursor: pointer;
+                &:after {
+                    color: $red;
+                }
+            }
+            &:focus {
+                outline: none!important;
+            }
+            &:before {
+                content: '';
+                display: block;
+                @include centre(x);
+                top: 0;
+                width: 100%;
+                max-width: 541px;
+                height: 83px;
+                background: transparent url(../img/bg/faq-shape.png) center top;
+            }
+            &:after {
+                font-family: "icomoon";
+                content: "\e900";
+                @include centre(y);
+                right: 22px;
+                font-size: 12px;
+                font-weight: 900;
+                color: #fff;
+                @include animate-fade;
+            }
+            &.active {
+                &:after {
+                    transform: translateY(-50%) rotate(90deg);
+                    color: $red;
+                }
+            }
+        }
+        .content {
+            border:0;
+            padding: 35px 55px 35px 30px;
+            display: none;
+            @include bp(sm-down) {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            p {
+                @include regular-text;
+                color: #000000;
+                text-align: justify;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+                strong {
+                    font-weight: normal;
+                    font-family: $robo-bold;
+                }
+                a {
+                    color: $red;
+                    &:hover {
+                        color: $blue;
+                    }
+                }
+            }
+        }
+    }
+}

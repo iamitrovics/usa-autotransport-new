@@ -1,0 +1,364 @@
+.page-wrapper {
+    padding-top: 250px;
+    @include bp(desktop) {
+        padding-top: 200px;
+    }
+    @include bp(lg) {
+        padding-top: 200px;
+    }
+    @include bp(md-down) {
+        padding-top: 150px;
+    }
+}
+
+.quote-form {
+    max-width: 773px;
+    width: 100%;
+    background: rgba($blue, .9) url(../img/bg/form-shades.png) center center repeat-y;
+    background-size: cover;
+    position: relative;
+    &-in {
+        .rib {
+            background: $red url(../img/bg/quote-ribbon.png) center center;
+            top: -40px;
+            margin-left: -20px;
+            height: 56px;
+            width: 232px;
+            position: relative;
+            color: white;
+            line-height: 55px;
+            text-align: center;
+            font-size: 34px;
+            font-family: $font-heading;
+            text-transform: uppercase;
+            text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.17);
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            &:before,
+            &:after {
+                content: "";
+                position: absolute;
+                right: -20px;
+                top: 0;
+                height: 50%;
+                width: 30px;
+                background: inherit;
+            }
+            &:before {
+                transform: skewX(-30deg);
+            }
+            &:after {
+                transform: skewX(30deg);
+                top: 50%;
+            }
+            .icon-star {
+                display: inline-block;
+                vertical-align: middle;
+                font-size: 26px;
+                color: $red;
+                text-shadow: none;
+                margin-right: 10px;
+            }
+            .shad {
+                &:before {
+                    content: ' ';
+                    position: absolute;
+                    width: 0;
+                    height: 0;
+                    left: 0px;
+                    top: 100%;
+                    border-width: 8px 10px;
+                    border-style: solid;
+                    border-color: #1b2738 #1b2738 transparent transparent;
+                }
+            }
+        }
+        .form-title {
+            display: block;
+            font-family: $font-heading;
+            font-size: 1.375em;
+            line-height: 1.23;
+            letter-spacing: 0.05em;
+            color: #fff;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-transform: uppercase;
+            @include bp(lg) {
+                font-size: 1.3em;
+            }
+        }
+        .wpcf7 form .wpcf7-response-output {
+            padding:0px;
+            margin:0px;
+            
+        }
+        
+        .control--checkbox {
+            margin-bottom: 30px!important;
+        }
+        form {
+            padding: 0px 30px 40px 30px;
+            .row {
+                padding-left: 10px;
+                padding-right: 10px;
+                [class*="col-"] {
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+            }
+            .form-group {
+                margin-bottom: 30px;
+            }
+            label {
+                font-size: 16px;
+                font-family: $font-main;
+                color: #e8e2d4;
+                text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.17);
+                display: block;
+                margin-bottom: 7px;
+            }
+            input[type=text],
+            input[type=email],
+            input[type=number],
+            input[type=tel],
+            select,
+            .bootstrap-select .btn {
+                font-family: $font-main;
+                font-size: 16px;
+                display: block;
+                width: 100%;
+                color: #27303a;
+                padding: 0 20px;
+                border-radius: 6px;
+                background-color: #e8e2d4;
+                height: 48px;
+                border: 0;
+                @include input-placeholder {
+                    color: #969696;
+                }
+            }
+            button[type=submit] {
+                @include red-btn;
+                margin-left: auto;
+                margin-right: auto;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: calc(-100% - 75px);
+                @include bp(sm-up) {
+                    min-width: 374px;
+                }
+                @include bp(sm-down) {
+                    width: 90%;
+                }
+                &:hover {
+                    background-color: $blue;
+                    cursor: pointer;
+                }
+            }
+            .date-area {
+                position: relative;
+                i {
+                    @include centre(y);
+                    @include font-ico;
+                    color: $red;
+                    font-size: 16px;
+                    right: 15px;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+
+.bootstrap-select {
+    width: 100%!important;
+    .btn {
+        width: 100%;
+        &:after {
+            margin: 0;
+            border: 0;
+            content: "";
+            display: block;
+            //font-family: "Font Awesome 5 Pro";
+            font-weight: 400;
+            color: #7F8285;
+            font-size: 18px;
+            right: 10px;
+            @include animate-fade;
+            @include centre(y);
+            background: url(../img/ico/angle-down.svg) center center no-repeat;
+            width: 10px;
+            height: 19px;
+            opacity: 0.6;
+        }
+    }
+    &.open {
+        .btn {
+            &:after {
+                transform: translateY(-50%) rotate(180deg);
+            }
+        }
+    }
+    .dropdown-menu {
+        background-color: $merino;
+        li.active,
+        li:active {
+            a {
+                background-color: $red;
+                color: #fff;
+            }
+        }
+    }
+    .dropdown-toggle .filter-option {
+        height: auto;
+    }
+}
+
+.wpcf7-not-valid-tip {
+    font-size: 14px;
+    padding-top: 5px;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output,
+.wpcf7 form.unaccepted .wpcf7-response-output {
+    font-size: 14px;
+    border: none;
+    margin: 0px;
+    padding: 0px;
+    color: red;
+    margin-top: 15px;
+    text-align: center;
+}
+
+
+#cookie-notice {
+    background-color: rgba($red,0.8);
+    z-index: 99999;
+    position: fixed;
+    min-width: 100%;
+    height: auto;
+    font-size: 13px;
+    letter-spacing: 0;
+    line-height: 20px;
+    left: 0;
+    text-align: center;
+    font-family: $font-main;
+    bottom: 0;
+    &.slide-up {
+        -webkit-animation-name: slideInUp;
+        animation-name: slideInUp;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    &.slide-down {
+        -webkit-animation-name: slideOutDown;
+        animation-name: slideOutDown;
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    &-in {
+        padding: 15px 30px;
+        @include bp(md) {
+            padding: 15px 50px;
+        }
+        @include bp(sm-down) {
+            padding: 15px 40px;
+        }
+    }
+    .notice-text, .notice-btns {
+        display: inline-block;
+    }
+    p {
+        margin-bottom: 6px;
+        color: #fff;
+        font-size: 14px;
+    }
+    .notice-btns {
+        a {
+            font-family: $font-main;
+            font-size: 13px;
+            letter-spacing: .25px;
+            line-height: 20px;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            text-transform: none;
+            display: inline-block;
+            cursor: pointer;
+            touch-action: manipulation;
+            white-space: nowrap;
+            outline: 0;
+            box-shadow: none;
+            text-shadow: none;
+            border: none;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            background: $blue;
+            color: #fff;
+            padding: 5px 10px;
+            margin: 0 0 0 10px;
+            &:hover {
+                box-shadow: inset 0 0 0 99999px rgba(0,0,0,.05);
+                text-decoration: none;
+                background-color: #446491;
+            }
+        }
+    }
+    #close-notice {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        margin-top: -10px;
+        width: 15px;
+        height: 15px;
+        opacity: .5;
+        padding: 10px;
+        outline: 0;
+        &:before, &:after {
+            position: absolute;
+            content: ' ';
+            height: 15px;
+            width: 2px;
+            top: 3px;
+            background-color: #fff;
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+        &:after {
+            transform: rotate(-45deg);
+        }
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.fieldset-cf7mls .cf7mls_back {
+    color:$white;
+    background:transparent!important;
+}
+
+
+
+.disclaimer-modal .modal {
+    background:$red;
+    color:$white;
+    padding-left: 40px;
+    padding-right: 40px;
+    p {
+        color:$white;
+        a {
+            color:$white;
+            text-decoration: underline;
+        }
+    }
+}

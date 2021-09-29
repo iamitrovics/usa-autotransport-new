@@ -1,0 +1,164 @@
+#page-footer {
+    background: $blue url(../img/bg/footer-bg.png) no-repeat top center;
+    @media (min-width:2000px) {
+        background-size: cover;
+    }
+    @media (min-width:2000px) and (max-width:2800px) {
+        background-position: top -25px center;
+    }
+    @media (min-width:2801px) and (max-width:3400px) {
+        background-position: top -38px center;
+    }
+    @media (min-width:3401px) {
+        background-position: top -60px center;
+    }
+    .footer-top {
+        padding-top: 22px;
+        padding-bottom: 22px;
+        position: relative;
+        .col-md-12 {
+            position: static;
+        }
+        .footer-logo {
+            position: absolute;
+            top: 10px;
+            img {
+                @include bp(lg-down) {
+                    height: 100px;
+                }
+            }
+        }
+        .footer-socials {
+            ul {
+                text-align: right;
+                li {
+                    display: inline-block;
+                    margin-left: 10px;
+                    a {
+                        color: #fff;
+                        font-size: 22px;
+                        &:hover {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .footer-middle {
+        padding-top: 60px;
+        padding-bottom: 60px;
+        .info-block {
+            padding-left: 170px;
+            @include bp(lg-down) {
+                padding-left: 0;
+            }
+            .contact-block {
+                margin-top: 30px;
+            }
+            p {
+                @include regular-text;
+                margin-bottom: 0;
+                color: #fff;
+                strong {
+                    font-family: $robo-bold;
+                }
+                a {
+                    color: inherit;
+                    padding-left: 25px;
+                    position: relative;
+                    i {
+                        @include centre(y);
+                        left: 0;
+                        @include font-ico;
+                        font-size: 16px;
+                        @include animate-fade;
+                    }
+                    &:hover {
+                        color: $red;
+                    }
+                }
+            }   
+        }
+        .footer-sitemap {
+            @include bp(sm-down) {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+            ul {
+                columns: 2;
+                -webkit-columns: 2;
+                -moz-columns: 2;
+                li {
+                    a {
+                        @include regular-text;
+                        margin-bottom: 10px;
+                        display: inline-block;
+                        color: #fff;
+                        line-height: 1.2;
+                        &:hover {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+        }
+        .footer-newsletter {
+            @include bp(md) {
+                margin-top: 40px;
+            }
+            .nl-title {
+                @include subheading-text2;
+                display: block;
+                margin-bottom: 10px;
+                color: #fff;
+                line-height: 1;
+            }
+            form {
+                input[type=text], input[type=email] {
+                    width: 100%;
+                    display: block;
+                    border-radius: 6px;
+                    border: 0;
+                    height: 48px;
+                    background-color: #2f4059;
+                    padding: 0 20px; 
+                    font-family: $font-main;
+                    font-size: 16px;
+                    color: #fff;
+                    @include input-placeholder {
+                        color: #969696;
+                    }
+                }
+                button[type=submit] {
+                    margin-top: 20px;
+                    @include  red-btn;
+                    min-width: 161px!important;
+                    height: 48px!important;
+                    text-transform: none;
+                    font-size: 30px!important;
+                    background-image: url(../img/bg/quote-btn-sm.png);
+                }
+            }
+        }
+    }
+}
+.copybar {
+    background: url(../img/bg/copyright-bg.png) no-repeat top center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border-top: 1px solid rgba(246, 247, 247, .11);
+    .row {
+        align-items: center;
+    }
+    small {
+        font-family: $font-main;
+        font-size: 14px;
+        line-height: 2.14;
+        color: #fff;
+        @include bp(sm-down) {
+            display: block;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,130 @@
+/* Login CSS */
+/* Login CSS */
+body.login div#login form#loginform p.submit input#wp-submit {
+	box-shadow:none;
+	background: #e8321c url(../img/bg/quote-btn.png) center center no-repeat;
+	text-shadow: none;
+	border: none;
+	text-transform: uppercase;
+	color:#fff;
+	display: block;
+	width: 100%;
+	text-align: center;
+	height: 60px;
+	line-height: 60px;
+	margin-top: 20px;
+    border-radius:0px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.wp-core-ui .button-group.button-large .button, .wp-core-ui .button.button-large {
+	background: #e8321c url(../img/bg/quote-btn.png) center center no-repeat;
+	text-shadow: none;
+	border: none;
+	text-transform: uppercase;
+	text-shadow: none;
+	text-transform: uppercase;
+	color:#fff;
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin-top: 20px;
+    border-radius:0px;
+    font-weight: bold;
+    font-size: 16px;    
+	height: 60px;
+	line-height: 60px;	
+}
+
+body.login div#login form#loginform p.submit input#wp-submit:hover {
+	background-color: #273852;
+}
+
+.login #login_error, .login .message {
+	border-left:4px solid #1eab60;
+}
+
+.login #backtoblog a:hover, .login #nav a:hover {
+	color:#000;
+}
+
+.login #backtoblog a {
+	font-weight: bold;
+	color:#00447c;
+}
+
+.login #backtoblog a, .login #nav a {
+	font-weight: bold;
+	color:#e93823;
+	opacity: 1;
+}
+
+.wp-core-ui .button-group.button-large .button, .wp-core-ui .button.button-large {
+	background: #e8321c url(../img/bg/quote-btn.png) center center no-repeat;
+	text-shadow: none;
+	border: none;
+	text-transform: uppercase;
+	height: 60px;
+	line-height: 60px;	
+	text-shadow: none;
+	color:#fff;
+}
+
+.wp-core-ui .button-group.button-large .button:hover , .wp-core-ui .button.button-large:hover {
+	background-color: #273852;
+}
+
+body.login {
+	background-color: #e4ded0;
+}
+
+#login {
+	padding-top: 3%!important;
+}
+
+.login form .forgetmenot label {
+	position: relative;
+	top:5px;
+	float:none;
+	color:#fff;
+}
+
+#nav {
+	text-align: center;
+}
+
+#backtoblog a {
+	text-align: center;
+	background:none;
+	display: block;
+	margin:0px;
+	padding:15px;
+	color:#101010!important;
+}
+
+#backtoblog a:hover {
+    color:#000!important;
+}
+
+.login #backtoblog, .login #nav {
+	padding:0px;
+}
+
+.login form {
+	border:none;
+    border-radius:0px;
+    background: rgba(39,56,82,.9) url(../img/bg/form-shades.png) center center repeat-y;
+    background-size: cover;
+    position: relative;	
+}
+
+.login h1 a {
+	margin-bottom: 0px !important;
+}
+
+.login form .input, .login input[type=password], .login input[type=text] {
+	border-radius: 6px;
+    background-color: #e8e2d4;
+	padding:10px;
+}

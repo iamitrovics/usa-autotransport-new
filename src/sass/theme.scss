@@ -1,0 +1,35 @@
+@import "theme/base/theme_variables";  // Theme Variables
+
+@import "theme/helpers/mixins"; // fonts styling etc
+@import "theme/helpers/typography"; // fonts styling etc
+@import "theme/helpers/grids"; // grids
+
+// Vendors
+// Vendors
+@import "theme/vendors/slick"; // slick
+@import "theme/vendors/datepicker"; // datepicker
+@import "theme/vendors/selectpicker"; // selectpicker
+@import "theme/vendors/modal"; // modal
+@import "theme/vendors/fancybox"; // fancybox
+
+
+
+// Components
+@import "theme/components/header"; // Header
+@import "theme/components/content"; // Content
+@import "theme/components/footer"; // Footer
+@import "theme/components/nav"; // Navigation
+
+// Load pages SCSS
+@import "theme/pages/home"; // Homepage
+@import "theme/pages/about"; // About
+@import "theme/pages/trailer"; // Trailer types
+@import "theme/pages/city"; // City
+@import "theme/pages/services"; // Services
+@import "theme/pages/faq"; // Faq
+@import "theme/pages/blog"; // Blog
+@import "theme/pages/contact"; // Contact
+@import "theme/pages/testimonials"; // Testimonials
+@import "theme/pages/tracking"; // Tracking
+@import "theme/pages/regular"; // Regular pages
+@import "theme/pages/gallery"; // Gallery
