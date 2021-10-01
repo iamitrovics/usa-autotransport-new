@@ -192,61 +192,99 @@ get_header();
         </div>
         <!-- /.container -->
     </section>
-    <!-- /#bottom-quote -->       
+    <!-- /#bottom-quote -->
+
+    <section id="related-posts" class="first-child-box">
+        <h2>Recent Posts</h2>
+        <div class="container">
+            <div class="row offer-boxes">
+
+                <?php
+                        $loop = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => 3, 'ignore_sticky_posts'=>1) ); ?>  
+                        <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+                    <div class="col-md-4">
+                        <div class="offer-box">
+                            <?php
+                            $imageID = get_field('featured_image_blog');
+                            $image = wp_get_attachment_image_src( $imageID, 'blog-image' );
+                            $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
+                            ?> 
+
+                            <img class="img-responsive" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
+                            <div class="ob-content">
+                                <h3><?php the_title(); ?></h3>
+                                <a href="<?php echo get_permalink(); ?>" class="readmore">Read More</a>
+                            </div>
+                            <!-- /.ob-content -->
+                        </div>
+                        <!-- /.offer-box -->
+                    </div>
+                    <!-- /.col-md-4 -->
+
+                    <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>    
+                    <?php wp_reset_query(); ?>
+
+            </div>
+            <!-- /.row offer-boxes -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /#related-posts -->
 
     <section id="related-posts">
+        <h2>Related Posts</h2>
         <div class="container">
-                <div class="row offer-boxes">
+            <div class="row offer-boxes">
 
-                    <?php $orig_post = $post;
-                    global $post;
-                    $categories = get_the_category($post->ID);
-                    if ($categories) {
-                    $category_ids = array();
-                    foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id;
+                <?php $orig_post = $post;
+                global $post;
+                $categories = get_the_category($post->ID);
+                if ($categories) {
+                $category_ids = array();
+                foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id;
 
-                    $args=array(
-                    'category__in' => $category_ids,
-                    'post__not_in' => array($post->ID),
-                    'posts_per_page'=> 3, // Number of related posts that will be shown.
-                    'ignore_sticky_posts'=>1
-                    );
+                $args=array(
+                'category__in' => $category_ids,
+                'post__not_in' => array($post->ID),
+                'posts_per_page'=> 3, // Number of related posts that will be shown.
+                'ignore_sticky_posts'=>1
+                );
 
-                    $my_query = new wp_query( $args );
-                    if( $my_query->have_posts() ) {
-                    while( $my_query->have_posts() ) {
-                    $my_query->the_post();?>
+                $my_query = new wp_query( $args );
+                if( $my_query->have_posts() ) {
+                while( $my_query->have_posts() ) {
+                $my_query->the_post();?>
 
-                        <div class="col-md-4">
-                            <div class="offer-box">
-                                <?php
-                                $imageID = get_field('featured_image_blog');
-                                $image = wp_get_attachment_image_src( $imageID, 'blog-image' );
-                                $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
-                                ?> 
+                    <div class="col-md-4">
+                        <div class="offer-box">
+                            <?php
+                            $imageID = get_field('featured_image_blog');
+                            $image = wp_get_attachment_image_src( $imageID, 'blog-image' );
+                            $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
+                            ?> 
 
-                                <img class="img-responsive" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
-                                <div class="ob-content">
-                                    <h3><?php the_title(); ?>r</h3>
-                                    <a href="<?php echo get_permalink(); ?>" class="readmore">Read More</a>
-                                </div>
-                                <!-- /.ob-content -->
+                            <img class="img-responsive" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
+                            <div class="ob-content">
+                                <h3><?php the_title(); ?>r</h3>
+                                <a href="<?php echo get_permalink(); ?>" class="readmore">Read More</a>
                             </div>
-                            <!-- /.offer-box -->
+                            <!-- /.ob-content -->
                         </div>
-                        <!-- /.col-md-4 -->
+                        <!-- /.offer-box -->
+                    </div>
+                    <!-- /.col-md-4 -->
 
-                    <?
-                    }
-                    }
-                    }
-                    $post = $orig_post;
-                    wp_reset_query(); ?>
+                <?
+                }
+                }
+                }
+                $post = $orig_post;
+                wp_reset_query(); ?>
 
-                </div>
-                <!-- /.row offer-boxes -->
             </div>
-            <!-- /.row -->
+            <!-- /.row offer-boxes -->
         </div>
         <!-- /.container -->
     </section>

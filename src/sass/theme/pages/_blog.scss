@@ -1118,6 +1118,17 @@
         padding-top: 0px;
         border-radius: 0;
     } 
+    &.first-child-box {
+        padding-bottom: 50px;
+    }
+    h2 {
+        font-family: "Go 2 Old Western";
+        font-size: 2.5em;
+        color: #111;
+        line-height: 1.05;
+        margin-bottom: 15px;
+        text-align: center;
+    }
     .offer-boxes {
         padding-left: 20px;
         padding-right: 20px;
