@@ -164,11 +164,120 @@ get_header();
                     </div>
                     <!-- /.container -->
                 </div>
-                <!-- /#blog-body -->  
+                <!-- /#blog-body --> 
+                
+                <?php elseif( get_row_layout() == 'featured_article' ): ?>    
+                    <?php
+                        $post_objects = get_sub_field('featured_article_list');
 
-            <?php endif; ?>
-        <?php endwhile; ?>
-    <?php endif; ?>    
+                        if( $post_objects ): ?>
+                            <?php foreach( $post_objects as $post): // variable must be called $post (IMPORTANT) ?>
+                                <?php setup_postdata($post); ?>
+                                    
+                                <div class="featured-article-box">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="blog-box">
+                                                    <div class="blog-photo">
+                                                        <a href="<?php echo get_permalink(); ?>" target="_blank">
+                                                            <?php
+                                                            $imageID = get_field('featured_image_blog');
+                                                            $image = wp_get_attachment_image_src( $imageID, 'blog-image' );
+                                                            $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
+                                                            ?> 
+
+                                                            <img class="img-responsive ap-photo" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" />                                         
+                                                        </a>
+                                                    </div>
+                                                    <!-- /.blog-photo -->
+
+                                                    <div class="blog-content">
+                                                        <h3><a href="<?php echo get_permalink(); ?>" target="_blank"><?php the_title(); ?></a></h3>
+                                                        <a href="<?php echo get_permalink(); ?>" class="readmore" target="_blank">Read More</a>
+                                                        <!-- /.readmore -->
+                                                    </div>
+                                                    <!-- /.blog-content -->
+                                                </div>
+                                                <!-- /.blog-box -->
+                                            </div>
+                                            <!-- /.col-md-12 -->
+                                        </div>
+                                        <!-- /.row -->
+                                    </div>
+                                    <!-- /.container -->
+                                </div>
+                                <!-- /.featured-article -->
+                                    
+                            <?php endforeach; ?>
+                        <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
+                    <?php endif; ?>
+                    <?php wp_reset_postdata(); ?>
+
+                <?php elseif( get_row_layout() == 'table' ): ?>
+
+                    <div class="blog-table-holder">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="blog-table-box">
+                                        <table style="width:100%" class="single-table">
+                                            <thead>
+                                                <tr role="row">
+                                                <?php
+                                                    // check if the repeater field has rows of data
+                                                    if(have_rows('table_head_cells')):
+                                                        // loop through the rows of data
+                                                        while(have_rows('table_head_cells')) : the_row();
+                                                            $hlabel = get_sub_field('table_cell_label_thead');
+                                                            ?>  
+                                                            <th tabindex="0" rowspan="1" colspan="1"><?php echo $hlabel; ?></th>
+                                                        <?php endwhile;
+                                                    else :
+                                                        echo 'No data';
+                                                    endif;
+                                                    ?>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                            <?php while ( have_posts() ) : the_post(); ?>
+                                                <?php 
+                                                // check for rows (parent repeater)
+                                                if( have_rows('table_body_row') ): ?>
+                                                    <?php 
+                                                    // loop through rows (parent repeater)
+                                                    while( have_rows('table_body_row') ): the_row(); ?>
+                                                            <?php 
+                                                            // check for rows (sub repeater)
+                                                            if( have_rows('table_body_cells') ): ?>
+                                                                <tr>
+                                                                    <?php 
+                                                                    // loop through rows (sub repeater)
+                                                                    while( have_rows('table_body_cells') ): the_row();
+                                                                        ?>
+                                                                        <td><?php the_sub_field('table_cell_label_tbody'); ?></td>
+                                                                    <?php endwhile; ?>
+                                                                </tr>
+                                                            <?php endif; //if( get_sub_field('') ): ?>
+                                                    <?php endwhile; // while( has_sub_field('') ): ?>
+                                                <?php endif; // if( get_field('') ): ?>
+                                                <?php endwhile; // end of the loop. ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <!-- /.blog-table-box -->
+                                </div>
+                                <!-- /.col-md-12 -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.container -->
+                    </div>
+                    <!-- /.blog-table-holder -->
+
+                <?php endif; ?>
+            <?php endwhile; ?>
+        <?php endif; ?>    
 
 
     <section id="bottom-quote" class="enclosed-quote full-quote">
@@ -233,62 +342,7 @@ get_header();
     </section>
     <!-- /#related-posts -->
 
-    <section id="related-posts">
-        <h2>Related Posts</h2>
-        <div class="container">
-            <div class="row offer-boxes">
-
-                <?php $orig_post = $post;
-                global $post;
-                $categories = get_the_category($post->ID);
-                if ($categories) {
-                $category_ids = array();
-                foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id;
-
-                $args=array(
-                'category__in' => $category_ids,
-                'post__not_in' => array($post->ID),
-                'posts_per_page'=> 3, // Number of related posts that will be shown.
-                'ignore_sticky_posts'=>1
-                );
-
-                $my_query = new wp_query( $args );
-                if( $my_query->have_posts() ) {
-                while( $my_query->have_posts() ) {
-                $my_query->the_post();?>
-
-                    <div class="col-md-4">
-                        <div class="offer-box">
-                            <?php
-                            $imageID = get_field('featured_image_blog');
-                            $image = wp_get_attachment_image_src( $imageID, 'blog-image' );
-                            $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
-                            ?> 
-
-                            <img class="img-responsive" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
-                            <div class="ob-content">
-                                <h3><?php the_title(); ?>r</h3>
-                                <a href="<?php echo get_permalink(); ?>" class="readmore">Read More</a>
-                            </div>
-                            <!-- /.ob-content -->
-                        </div>
-                        <!-- /.offer-box -->
-                    </div>
-                    <!-- /.col-md-4 -->
-
-                <?
-                }
-                }
-                }
-                $post = $orig_post;
-                wp_reset_query(); ?>
-
-            </div>
-            <!-- /.row offer-boxes -->
-        </div>
-        <!-- /.container -->
-    </section>
-    <!-- /#related-posts -->
+    
 
 <?php
 get_footer(); ?>
