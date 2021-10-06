@@ -342,7 +342,62 @@ get_header();
     </section>
     <!-- /#related-posts -->
 
-    
+    <section id="related-posts">
+        <h2>Related Posts</h2>
+        <div class="container">
+            <div class="row offer-boxes">
+
+                <?php $orig_post = $post;
+                global $post;
+                $categories = get_the_category($post->ID);
+                if ($categories) {
+                $category_ids = array();
+                foreach($categories as $individual_category) $category_ids[] = $individual_category->term_id;
+
+                $args=array(
+                'category__in' => $category_ids,
+                'post__not_in' => array($post->ID),
+                'posts_per_page'=> 3, // Number of related posts that will be shown.
+                'ignore_sticky_posts'=>1
+                );
+
+                $my_query = new wp_query( $args );
+                if( $my_query->have_posts() ) {
+                while( $my_query->have_posts() ) {
+                $my_query->the_post();?>
+
+                    <div class="col-md-4">
+                        <div class="offer-box">
+                            <?php
+                            $imageID = get_field('featured_image_blog');
+                            $image = wp_get_attachment_image_src( $imageID, 'blog-image' );
+                            $alt_text = get_post_meta($imageID , '_wp_attachment_image_alt', true);
+                            ?> 
+
+                            <img class="img-responsive" alt="<?php echo $alt_text; ?>" src="<?php echo $image[0]; ?>" /> 
+                            <div class="ob-content">
+                                <h3><?php the_title(); ?>r</h3>
+                                <a href="<?php echo get_permalink(); ?>" class="readmore">Read More</a>
+                            </div>
+                            <!-- /.ob-content -->
+                        </div>
+                        <!-- /.offer-box -->
+                    </div>
+                    <!-- /.col-md-4 -->
+
+                <?
+                }
+                }
+                }
+                $post = $orig_post;
+                wp_reset_query(); ?>
+
+            </div>
+            <!-- /.row offer-boxes -->
+        </div>
+        <!-- /.container -->
+    </section>
+    <!-- /#related-posts -->
 
 <?php
 get_footer(); ?>
