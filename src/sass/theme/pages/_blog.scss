@@ -28,7 +28,7 @@
     }
     .header-caption {
         text-align: center;
-        max-width: 790px;
+        max-width: 990px;
         margin-left: auto;
         margin-right: auto;
         @include bp(sm-down) {
@@ -1396,4 +1396,67 @@
         width: 100%!important;
         max-width: 100%!important;
     }
+}
+
+#post-nav {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    .post-wrapper {
+        position: relative;
+    }
+    #nav-slider {
+        .item {
+            a {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .nav-col {
+                text-align: center;
+                height: 100%;
+                &:hover {
+                    span {
+                        color:$red;
+                    }
+                    .icon {
+                        background:$white;
+                    }
+                }
+                .icon {
+                    margin:0px auto;
+                    width: 120px;
+                    height: 120px;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    margin-bottom: 15px;
+                    border:2px solid #e8321c;
+                    background:rgba(#e4ded0,0.7);
+                    @include animate-fade;
+                    @include bp(sm-down) {
+                        width: 90px;
+                        height: 90px;
+                    }
+                    img {
+                        @include centre(both);
+                        width: 52px;
+                        @include bp(sm-down) {
+                            width: 40px;
+                        }
+                        // filter: brightness(0) invert(1);
+                    }                
+                }
+                span {
+                    display: block;
+                    @include animate-fade;    
+                    font-family: $font-heading;
+                    font-size: 1.475em;
+                    color: #111111;
+                    line-height: 1.2;                          
+                }
+            }
+        }
+    }    
 }

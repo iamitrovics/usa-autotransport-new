@@ -319,3 +319,51 @@ $slick-opacity-not-active: 0.25 !default;
         right: 60px;
     }
 }
+
+#nav-slider {
+    .slick-prev:before, .slick-next:before {
+        font-family: "icomoon";
+        font-weight: 400;
+        font-size: 36px;
+        line-height: 1;
+        opacity: 1;
+        color: #000;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        @include animate-fade;
+    }   
+    .slick-prev:before { content: "\e902";}
+
+
+    .slick-next:before { content: "\e903"; }
+    .slick-prev, .slick-next {
+        font-size: 0;
+        line-height: 0;
+        position: absolute;
+        cursor: pointer;
+        color: transparent;
+        border: none;
+        outline: none;
+        background: transparent;
+        z-index: 99;
+        @include centre(y);
+
+        &:hover {
+            &:before {
+                color: $red;
+            }
+        }
+    }
+    .slick-prev {
+        left: -30px;
+        @include bp(sm-down) {
+            left:0px;
+        }
+    }
+    .slick-next {
+        right: -30px;
+        @include bp(sm-down) {
+            right:0px;
+        }
+    }
+}

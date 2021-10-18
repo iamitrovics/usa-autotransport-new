@@ -64,6 +64,44 @@
                 },
             ]
         });
+
+        $('#nav-slider').slick({
+            infinite: false,
+            speed: 300,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: true,
+            autoplay: true,
+            infinite: true,
+            autoplaySpeed: 4000,
+            responsive: [{
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                    }
+                },
+
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2,
+                    }
+                },
+
+            ]
+        });        
+
+        
         $('#timeline-slider').slick({
             infinite: true,
             speed: 300,
