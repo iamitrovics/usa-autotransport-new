@@ -1207,7 +1207,7 @@
     }
 }
 
-#related-posts {
+#related-posts, #services-blog-module {
     background-color: $merino;
     position: relative;
     padding-top: 35px;
@@ -1335,6 +1335,21 @@
                         background-color: $blue;
                     }
                 }
+            }
+        }
+    }
+}
+#services-blog-module {
+    padding: 30px 0;
+    &:after {
+        display: none;
+    }
+    .offer-boxes {
+        .offer-box {
+            height: 300px;
+            img {
+                height: 100%;
+                object-fit: cover;
             }
         }
     }
