@@ -174,6 +174,45 @@ $container = get_theme_mod( 'understrap_container_type' );
                     <!-- /.container -->
                 </div>
                 <!-- /#blog-body -->     
+
+            <?php elseif( get_row_layout() == 'accordion' ): ?>	
+
+                <div class="blog-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="blog-body-in">
+                                    <div id="faq-area" class="blog-accordion">
+                                        <div class="faq__accordion">
+                                            <?php if( get_sub_field('accordion_title') ): ?>
+                                                <h2><?php the_sub_field('accordion_title'); ?></h2>
+                                            <?php endif; ?>
+                                            <?php if( have_rows('accordion_list') ): ?>
+                                                <?php while( have_rows('accordion_list') ): the_row(); ?>
+
+                                                    <div class="faq-wrap">
+                                                        <h3 class="accordion-heading"><?php the_sub_field('heading'); ?></h3>
+                                                        <div class="content">
+                                                            <?php the_sub_field('content'); ?>
+                                                        </div>
+                                                    </div>
+
+                                                <?php endwhile; ?>
+                                            <?php endif; ?>
+                                        </div>
+                                        <!-- /.faq__accordion -->
+                                    </div>
+                                    <!-- /#faq-area -->
+                                </div>
+                                <!-- /.blog-body-in -->
+                            </div>
+                            <!-- /.col-md-12 -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.container -->
+                </div>
+                <!-- /#blog-body -->
                 
             <?php elseif( get_row_layout() == 'quote_cta' ): ?>
 
