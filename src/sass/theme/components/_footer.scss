@@ -162,3 +162,90 @@
         }
     }
 }
+
+// Fixed CTA
+#fixed-cta {
+    position: fixed;
+    bottom:10px;
+    right:10px;
+    background:#e8341f;
+    border-radius: 4px;
+    z-index:9999;
+    animation: pulse 750ms infinite;
+    @include animate-fade;
+    z-index: 999999;
+    padding:5px;
+    &:hover {
+        background: #273852;
+        a {
+            background-color: #273852;
+        }
+    }
+    @include bp(sm-down) {
+        left:0px;
+        right:auto;
+        bottom:0px;
+        width: 100%;
+        text-align: center;
+    }
+    .phone-text {
+        text-align: center;
+    }
+    a {
+        padding-left: 70px;
+        padding-right: 30px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: block;     
+        border:1px solid #fff;   
+        background:#e8341f;
+        @include bp(sm-down) {
+            width: 100%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+    }
+    animation: pulse 1.5s ease infinite;
+    i {
+        font-size: 24px;
+        @include centre(both);
+    }
+    em {
+        display: block;
+        width: 44px;
+        height: 44px;
+        border-radius: 100%;
+        @include centre(y);
+        color:$white;
+        font-size: 24px;
+        left:20px;        
+        @include bp(sm-down) {
+            left:25px;
+        }
+    }
+    span {
+        display: block;
+        text-transform: uppercase;
+        color:$white;
+        font-size: 28px;
+        line-height: 1;
+    }
+    small {
+        font-size: 16px;
+        color:$white;
+        display: block;
+        line-height: 1.5;
+    }    
+}
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }

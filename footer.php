@@ -131,11 +131,52 @@
         <!-- modal -->
     </div>    
 
+
+    
+    <?php 
+    $values = get_field( 'phone_number_hero_city' );
+    if ( $values ) { ?>
+
+        <div id="fixed-cta">
+            
+            <a href="tel:<?php the_field('phone_number_hero_city') ?>">
+                <em><i class="fal fa-phone-alt"></i></em>
+                <div class="phone-text">
+                    <small class="label">Get a Free Estimate</small>
+                    <span><?php the_field('phone_number_hero_city') ?></span>
+                </div>
+                <!-- // text  -->
+            </a>
+
+        </div>
+        <!-- // fixed cta  -->	
+
+    <?php 
+    } else { ?>
+
+        <div id="fixed-cta">
+            
+            <a href="tel:<?php the_field('main_phone_number_options', 'options') ?>">
+                <em><i class="fal fa-phone-alt"></i></em>
+                <div class="phone-text">
+                    <small class="label">Get a Free Estimate</small>
+                    <span><?php the_field('main_phone_number_options', 'options') ?></span>
+                </div>
+                <!-- // text  -->
+            </a>
+
+        </div>
+        <!-- // fixed cta  -->	
+
+    <?php } ?>    
+
+
 <?php wp_footer(); ?>
 
 	<?php if( get_field('footer_code_snippet', 'options') ): ?>
 		<?php the_field('footer_code_snippet', 'options'); ?>
 	<?php endif; ?>
+    
 
     <script>
         
