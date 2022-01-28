@@ -87,7 +87,7 @@ $container = get_theme_mod( 'understrap_container_type' );
                 <section id="blog-intro">
                     <div class="intro-topleft-shape"></div> 
                     <div class="bf-top-shape"></div>  
-                    <img src="img/ico/stars.png" alt="" class="stars"> 
+                    <img src="<?php bloginfo('template_directory'); ?>/img/ico/stars.png" alt="" class="stars"> 
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">

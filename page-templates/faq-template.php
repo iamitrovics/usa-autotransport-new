@@ -30,7 +30,7 @@ get_header();
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <img src="img/ico/stars.png" alt="" class="stars">
+                    <img src="<?php bloginfo('template_directory'); ?>/img/ico/stars.png" alt="" class="stars">
                     <div class="about-intro-content">
                         <div class="faq-text">
                             <?php the_field('intro_text_faq_content'); ?>

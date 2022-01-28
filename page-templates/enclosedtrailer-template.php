@@ -95,7 +95,7 @@ get_header();
         </div>
         <!-- /.about-items -->
 
-        <div class="trailer-why"  style="background-image: url(img/bg/trailer-why.jpg);">
+        <div class="trailer-why">
             <div class="row">
                 <div class="col-md-12">
                     <div class="tw-content">
