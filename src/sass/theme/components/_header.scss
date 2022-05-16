@@ -37,6 +37,7 @@
         .navbar-brand {
             img {
                 height: 75px!important;
+                width: auto!important;
             }
         }
     }
@@ -108,6 +109,7 @@
                 image-rendering: -webkit-optimize-contrast;
                 image-rendering: crisp-edges;
                 -ms-interpolation-mode: nearest-neighbor;
+                width:auto;
                 @include bp(desktop) {
                     height: 110px;
                 }
