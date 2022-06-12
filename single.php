@@ -393,7 +393,7 @@ get_header();
             <div class="row offer-boxes">
 
                 <?php
-                        $loop = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => 3, 'ignore_sticky_posts'=>1) ); ?>  
+                        $loop = new WP_Query( array( 'post_type' => 'post', 'posts_per_page' => 3, 'ignore_sticky_posts'=>1   , 'post__not_in' => array( $post->ID )  ) ); ?>  
                         <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
                     <div class="col-md-4">
@@ -467,6 +467,7 @@ get_header();
 
                     <?php
                         }
+                        
                         wp_reset_postdata();
                     }
                 ?>

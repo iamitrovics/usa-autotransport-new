@@ -1472,3 +1472,17 @@
         }
     }    
 }
+
+
+.blog-body-in {
+    #faq-area .faq__accordion .content p  {
+        margin-bottom: 30px;
+        a {
+            color:$red;
+            text-decoration: underline;
+            &:hover {
+                color:$blue;
+            }            
+        }
+    }
+}
