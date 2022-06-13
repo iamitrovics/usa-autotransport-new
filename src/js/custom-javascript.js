@@ -22,6 +22,13 @@
             }
         });
 
+        $('#close-notice, #accept-cookie').click(function(e) {
+            e.preventDefault();
+            $("#cookie-notice").removeClass("slide-up");
+            $("#cookie-notice").addClass("slide-down");
+        });
+
+
         //faq accordion
         $(document).ready(function() {
             $(".faq__accordion .faq-wrap > .accordion-heading").on("click", function(e) {

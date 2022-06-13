@@ -178,7 +178,7 @@
 	<?php endif; ?>
     
 
-    <script>
+    <!-- <script>
         
         //cookie notice
         jQuery('#cookie-notice').addClass('slide-up');
@@ -189,7 +189,14 @@
             jQuery("#cookie-notice").addClass("slide-down");
         });
 
-    </script>
+    </script> -->
+
+    <script>
+    if (!sessionStorage.alreadyClicked) {
+        jQuery('#cookie-notice').addClass('slide-up');
+        sessionStorage.alreadyClicked = 1;
+    }
+  </script> 	
 
 </body>
 </html>
