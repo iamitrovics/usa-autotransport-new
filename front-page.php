@@ -462,7 +462,7 @@
                         <div class="timeline-year">1970</div>
                         <div class="timeline-item">
                             <p>When automakers started selling millions of vehicles car haulers needed to be more reliable and able to handle some of the toughest road conditions. Low oil prices gave incentives for enthusiasts to buy popular big pickups and SUVs so the size of the haulers itself needed to increase. </p>
-                            <img src="<?php bloginfo('template_directory'); ?>/img/misc/history2.png" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/img/misc/history2.webp" alt="">
                         </div>
                         <!-- /.timeline-item -->
                         <div class="timeline-year">2000</div>
@@ -482,14 +482,14 @@
                 <div class="col-md-12">
                     <div class="bottom-content">
                         <div class="timeline-item">
-                            <img src="<?php bloginfo('template_directory'); ?>/img/misc/history1.png" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/img/misc/history1.webp" alt="">
                             <p>Big changes were taking place in automobile and auto transportation industry. From introducing a safety belt to making cars more cost efficient and affordable, the car industry has bloomed and 83-foot car carriers capable of carrying 12 automobiles were developed.</p>
                         </div>
                         <!-- /.timeline-item -->
                         <div class="timeline-year">1980</div>
                         <div class="timeline-year">1990</div>
                         <div class="timeline-item">
-                            <img src="<?php bloginfo('template_directory'); ?>/img/misc/history3.png" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/img/misc/history3.webp" alt="">
                             <p>Today, auto transport doesn’t consist only of shipping new cars from manufacturers. With job market opening up, more and more people are ready to relocate and transport their vehicles to pursue new opportunities. </p>
                         </div>
                         <!-- /.timeline-item -->
@@ -507,19 +507,19 @@
                 <div class="col-md-12">
                     <div id="timeline-slider">
                         <div class="timeline-item">
-                            <img src="<?php bloginfo('template_directory'); ?>/img/misc/history1.png" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/img/misc/history1.webp" alt="">
                             <span class="year">1960-70's</span>
                             <p>Big changes were taking place in automobile and auto transportation industry. From introducing a safety belt to making cars more cost efficient and affordable, the car industry has bloomed and 83-foot car carriers capable of carrying 12 automobiles were developed.</p>
                         </div>
                         <!-- /.timeline-item -->
                         <div class="timeline-item">
-                            <img src="<?php bloginfo('template_directory'); ?>/img/misc/history2.png" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/img/misc/history2.webp" alt="">
                             <span class="year">1980-90's</span>
                             <p>When automakers started selling millions of vehicles car haulers needed to be more reliable and able to handle some of the toughest road conditions. Low oil prices gave incentives for enthusiasts to buy popular big pickups and SUVs so the size of the haulers itself needed to increase. </p>
                         </div>
                         <!-- /.timeline-item -->
                         <div class="timeline-item">
-                            <img src="<?php bloginfo('template_directory'); ?>/img/misc/history3.png" alt="">
+                            <img src="<?php bloginfo('template_directory'); ?>/img/misc/history3.webp" alt="">
                             <span class="year">2000-2010's</span>
                             <p>Today, auto transport doesn’t consist only of shipping new cars from manufacturers. With job market opening up, more and more people are ready to relocate and transport their vehicles to pursue new opportunities. </p>
                         </div>
