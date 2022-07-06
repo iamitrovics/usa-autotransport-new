@@ -193,8 +193,8 @@ gulp.task( 'scripts', function() {
 		paths.dev + '/js/jquery-ui.min.js',
 		paths.dev + '/js/jquery.matchHeight.js',	
 		paths.dev + '/js/dropdown.min.js',
-		paths.dev + '/js/bootstrap-select.min.js',
-		paths.dev + '/js/jquery.fancybox.min.js',
+		// paths.dev + '/js/bootstrap-select.min.js',
+		// paths.dev + '/js/jquery.fancybox.min.js',
 		paths.dev + '/js/custom-javascript.js'
 	];
 	gulp

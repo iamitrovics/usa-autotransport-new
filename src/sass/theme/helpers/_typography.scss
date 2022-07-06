@@ -17,32 +17,32 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Roboto Slab Light';
-    src: url('../fonts/RobotoSlab-Light.woff2') format('woff2');
-    font-weight: 300;
-    font-style: normal;
-    font-display: swap;
-}
+// @font-face {
+//     font-family: 'Roboto Slab Light';
+//     src: url('../fonts/RobotoSlab-Light.woff2') format('woff2');
+//     font-weight: 300;
+//     font-style: normal;
+//     font-display: swap;
+// }
 
 
 
-@font-face {
-    font-family: 'Go 2 Old Western';
-    src: url('../fonts/Go2OldWestern.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
+// @font-face {
+//     font-family: 'Go 2 Old Western';
+//     src: url('../fonts/Go2OldWestern.woff2') format('woff2');
+//     font-weight: normal;
+//     font-style: normal;
+//     font-display: swap;
+// }
 
 
 
 $font-main: 'Roboto Slab Regular';
-$font-heading: 'Go 2 Old Western';
+$font-heading: 'Roboto Slab Bold';
 
 $robo-bold: 'Roboto Slab Bold';
 $robo-reg: 'Roboto Slab Regular';
-$robo-light: 'Roboto Slab Light';
+$robo-light: 'Roboto Slab Regular';
 
 
 

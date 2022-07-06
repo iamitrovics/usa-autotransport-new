@@ -241,7 +241,7 @@
         $(".date-picker-input").datepicker({
             minDate: '0'
         });
-        $('.selectpicker').selectpicker();
+        // $('.selectpicker').selectpicker();
 
         $(document).on('click', '.scroll-down a', function(event) {
             event.preventDefault();
@@ -250,6 +250,5 @@
             }, 500);
         });
         $('#reviews-area .col-lg-6').matchHeight();
-        $('#gallery-photos [data-fancybox="gallery"]').fancybox();
     });
 })(jQuery);

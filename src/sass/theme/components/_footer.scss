@@ -1,5 +1,5 @@
 #page-footer {
-    background: $blue url(../img/bg/footer-bg.png) no-repeat top center;
+    background: $blue url(../img/bg/footer-bg.webp) no-repeat top center;
     @media (min-width:2000px) {
         background-size: cover;
     }
@@ -136,7 +136,7 @@
                     min-width: 161px!important;
                     height: 48px!important;
                     text-transform: none;
-                    font-size: 30px!important;
+                    font-size: 20px!important;
                     background-image: url(../img/bg/quote-btn-sm.png);
                 }
             }
@@ -144,7 +144,7 @@
     }
 }
 .copybar {
-    background: url(../img/bg/copyright-bg.png) no-repeat top center;
+    background: url(../img/bg/copyright-bg.webp) no-repeat top center;
     padding-top: 12px;
     padding-bottom: 12px;
     border-top: 1px solid rgba(246, 247, 247, .11);
@@ -206,6 +206,9 @@
         }
     }
     animation: pulse 1.5s ease infinite;
+    @include bp(sm-down) {
+        animation: none;
+    }
     i {
         font-size: 24px;
         @include centre(both);

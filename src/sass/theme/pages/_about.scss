@@ -592,7 +592,7 @@
                     border-radius: 6px;
                 }
                 h3 {
-                    font-size: 3.750em;
+                    font-size: 3em;
                     line-height: 1.2;
                     color: #fff;
                     margin-bottom: 0;
@@ -600,16 +600,16 @@
                     margin-left: auto;
                     margin-right: auto;
                     @include bp(desktop) {
-                        font-size: 3.2em;
+                        font-size: 2.5em;
                     }
                     @include bp(lg) {
-                        font-size: 2.8em;
+                        font-size: 2.5em;
                     }
                     @include bp(md) {
-                        font-size: 2.6em;
+                        font-size: 2.2em;
                     }
                     @include bp(sm-down) {
-                        font-size: 2.4em;
+                        font-size: 2em;
                     }
                 }
                 a.costs-btn {
@@ -619,8 +619,9 @@
                     margin-left: auto;
                     margin-right: auto;
                     min-width: 100%!important;
+                    font-size: 22px;
                     @include bp(lg) {
-                        font-size: 29px;
+                        font-size: 22px;
                     }
                 }
                 .cb-content {
@@ -857,7 +858,7 @@
             background-size: cover;
             justify-content: center;
             @media (min-width: 768px) {
-                font-size: 46px;
+                font-size: 32px;
                 width: 314px;
                 height: 80px;
                 line-height: 80px;
@@ -907,6 +908,7 @@
         a {
             @include red-btn;
             min-width: 300px!important;
+            font-size: 22px;
             &:before {
                 @include font-ico;
                 @include animate-fade;

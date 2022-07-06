@@ -158,6 +158,14 @@
                 margin-bottom: 15px!important;
                 font-size: 32px;
             }
+            p {
+                a {
+                    color:$red;
+                    &:hover {
+                        color:$blue;
+                    }
+                }
+            }
             ul {
                 list-style-type: disc;
                 padding-left: 1.2em;
@@ -629,6 +637,9 @@
             width: 25%;
             display: block;
             margin-bottom: 25px;
+            @include bp(sm-down) {
+                width: 50%;
+            }
             a {
                 color:$black;
                 font-size: 18px;

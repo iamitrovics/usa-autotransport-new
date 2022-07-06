@@ -20,7 +20,7 @@
         text-align: center;
         h1 {
             @include page-title;
-            margin-bottom: 10px;
+            margin-bottom: 25px;
         }
         p {
             @include regular-text;

@@ -63,3 +63,8 @@ get_header();
 
 
 <?php get_footer(); ?>
+
+<script src="<?php bloginfo('template_directory'); ?>/js/jquery.fancybox.min.js"></script>
+<script>
+    jQuery('#gallery-photos [data-fancybox="gallery"]').fancybox();
+</script>

@@ -369,34 +369,19 @@
             }
             font-family: $font-heading;
             color: #504e4b;
-            font-size: 54px;
+            font-size: 44px;
             line-height: 1.2;
             @include bp(desktop) {
-                font-size: 50px;
-            }
-            @include bp(lg) {
-                font-size: 44px;
-            }
-            @include bp(md) {
                 font-size: 40px;
             }
-            @include bp(sm-down) {
-                font-size: 35px;
+            @include bp(lg) {
+                font-size: 34px;
             }
-            span {
-                display: block;
-                @include bp(md-down) {
-                    display: inline-block!important;
-                }
-                &:nth-child(2) {
-                    font-size: 137%;
-                }
-                &:nth-child(3) {
-                    font-size: 148%;
-                }
-                &:nth-child(4) {
-                    font-size: 200%;
-                }
+            @include bp(md) {
+                font-size: 30px;
+            }
+            @include bp(sm-down) {
+                font-size: 25px;
             }
         }
     }

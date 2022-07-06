@@ -405,14 +405,14 @@
                             line-height: 1.2;
                             display: block;
                             &:nth-child(1) {
-                                font-size: 66px;
+                                font-size: 56px;
                                 line-height: 1;
                             }
                             &:nth-child(2) {
-                                font-size: 28px;
+                                font-size: 22px;
                             }
                             &:nth-child(3) {
-                                font-size: 36px;
+                                font-size: 32px;
                             }
                         }
                     }
@@ -550,6 +550,7 @@
         a {
             @include red-btn;
             min-width: 300px!important;
+            font-size: 22px;
             &:after {
                 @include font-ico;
                 @include animate-fade;
@@ -584,33 +585,33 @@
                     display: inline-block!important;
                 }
                 &:nth-child(2) {
-                    font-size: 73px;
+                    font-size: 43px;
                     @include bp(desktop) {
-                        font-size: 65px;
+                        font-size: 35px;
                     }
                     @include bp(lg) {
-                        font-size: 58px;
+                        font-size: 28px;
                     }
                     @include bp(md) {
-                        font-size: 48px;
+                        font-size: 28px;
                     }
                     @include bp(sm-down) {
-                        font-size: 39px;
+                        font-size: 20px;
                     }
                 }
                 &:nth-child(3) {
-                    font-size: 61px;
+                    font-size: 41px;
                     @include bp(desktop) {
-                        font-size: 55px;
+                        font-size: 35px;
                     }
                     @include bp(lg) {
-                        font-size: 50px;
+                        font-size: 30px;
                     }
                     @include bp(md) {
-                        font-size: 45px;
+                        font-size: 25px;
                     }
                     @include bp(sm-down) {
-                        font-size: 40px;
+                        font-size: 20px;
                     }
                 }
             }
@@ -945,25 +946,25 @@
             span {
                 display: block;
                 &:nth-child(1) {
-                    font-size: 56px;
+                    font-size: 46px;
                 }
                 &:nth-child(2) {
-                    font-size: 53px;
+                    font-size: 46px;
                 }
                 &:nth-child(3) {
-                    font-size: 57px;
+                    font-size: 46px;
                 }
                 @include bp(lg-down) {
                     display: inline-block;
                 }
                 @include bp(lg) {
-                    font-size: 50px!important;
+                    font-size: 30px!important;
                 }
                 @include bp(md) {
-                    font-size: 40px!important;
+                    font-size: 20px!important;
                 }
                 @include bp(sm-down) {
-                    font-size: 35px!important;
+                    font-size: 25px!important;
                 }
             }
         }

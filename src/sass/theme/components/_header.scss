@@ -188,6 +188,7 @@
     @include bp(md-down) {
         padding-bottom: 80px;
         min-height: auto;
+        background: #ded5c8!important;
     }
     .header-caption {
         text-align: center;
@@ -234,7 +235,7 @@
         text-align: center;
         h1 {
             @include page-title;
-            margin-bottom: 10px;
+            margin-bottom: 25px;
         }
         p {
             font-size: 1.375em;

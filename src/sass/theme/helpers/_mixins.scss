@@ -239,20 +239,20 @@
 
 @mixin page-title {
     font-family: $font-heading;
-    font-size: 6.250em;
+    font-size: 5.250em;
     color: #101010;
     line-height: 1;
     @include bp(desktop) {
-        font-size: 5em;
-    }
-    @include bp(lg) {
-        font-size: 4.5em;
-    }
-    @include bp(md) {
         font-size: 4em;
     }
-    @include bp(sm-down) {
+    @include bp(lg) {
         font-size: 3.5em;
+    }
+    @include bp(md) {
+        font-size: 3em;
+    }
+    @include bp(sm-down) {
+        font-size: 2.5em;
     }
     &:before {
         display: block;
@@ -269,20 +269,20 @@
 
 @mixin heading-text {
     font-family: $font-heading;
-    font-size: 3em;
+    font-size: 2.75em;
     color: #111111;
-    line-height: 0.875;
+    line-height: 1.1;
     @include bp(desktop) {
         font-size: 2.8em;
     }
     @include bp(lg) {
-        font-size: 2.6em;
+        font-size: 2.4em;
     }
     @include bp(md) {
-        font-size: 2.5em;
+        font-size: 2.3em;
     }
     @include bp(sm-down) {
-        font-size: 2.4em;
+        font-size: 2.1em;
     }
     &:before {
         display: block;
@@ -317,20 +317,20 @@
 
 @mixin heading-text3 {
     font-family: $font-heading;
-    font-size: 4.188em;
+    font-size: 3.188em;
     line-height: 1.2;
     color: #fff;
     @include bp(desktop) {
-        font-size: 3.9em;
+        font-size: 2.9em;
     }
     @include bp(lg) {
-        font-size: 3.6em;
+        font-size: 2.6em;
     }
     @include bp(md) {
-        font-size: 3.2em;
+        font-size: 2.2em;
     }
     @include bp(sm-down) {
-        font-size: 2.8em;
+        font-size: 1.8em;
     }
 }
 
@@ -356,7 +356,7 @@
 
 @mixin subheading-text2 {
     font-family: $font-heading;
-    font-size: 1.875em;
+    font-size: 1.375em;
     color: #111111;
     line-height: 1.2;
 }
@@ -371,7 +371,7 @@
 }
 
 @mixin red-btn {
-    background: $red url(../img/bg/quote-btn.png) center center no-repeat;
+    background: $red url(../img/bg/quote-btn.webp) center center no-repeat;
     background-size: cover;
     display: inline-flex;
     align-items: center;
@@ -379,7 +379,7 @@
     height: 75px;
     text-align: center;
     font-family: $font-heading;
-    font-size: 40px;
+    font-size: 28px;
     color: #fff;
     text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.17);
     text-transform: uppercase;
@@ -388,10 +388,10 @@
     @include animate-fade;
     padding: 0 30px;
     @include bp(lg) {
-        font-size: 35px;
+        font-size: 25px;
     }
     @include bp(md-down) {
-        font-size: 30px;
+        font-size: 20px;
     }
     @include bp(sm-up) {
         min-width: 374px;
