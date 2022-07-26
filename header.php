@@ -19,9 +19,17 @@
 
 	<link rel="icon" type="image/png"  href="<?php echo get_template_directory_uri(); ?>/img/ico/favicon.png">
 
-<!-- 
-	<link rel="dns-prefetch" href="//fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin> -->
+    <meta name="google-site-verification" content="5y3eCIjUV_edDxUKVDlSF_q9oHPC1y-UWt-TS6hrmwQ" />
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KB5X64F');</script>
+    <!-- End Google Tag Manager -->
+
+
 	<?php if( get_field('head_code_snippet', 'options') ): ?>
 		<?php the_field('head_code_snippet', 'options'); ?>
 	<?php endif; ?>
@@ -52,10 +60,14 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KB5X64F"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->    
+
 	<?php if( get_field('body_code_snippet', 'options') ): ?>
 		<?php the_field('body_code_snippet', 'options'); ?>
 	<?php endif; ?>
-
 
 	<div class="menu-overlay"></div>
 	<div class="main-menu-sidebar visible-xs visible-sm visible-md" id="menu">
